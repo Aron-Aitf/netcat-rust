@@ -1,0 +1,18 @@
+[package]
+name = "rust_netcat"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+clap = { version = "4.5.47", features = ["derive"] }
+
+[profile.release]
+lto = true
+strip = true
+opt-level = 3
+panic = "abort"
+codegen-units = 1
+
+[[bin]]
+name = "netcat"
+path = "src/main.rs"
