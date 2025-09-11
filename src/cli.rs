@@ -4,9 +4,9 @@ use clap::Parser;
 
 #[derive(Parser, Debug, Clone)]
 pub struct CliArgs {
-    root_url: String,
+    pub root_url: String,
     #[arg(short, long = "input-prompt", default_value_t = String::from_str(">").unwrap())]
-    input_prompt: String,
+    pub input_prompt: String,
     #[arg(short, long = "output-prompt", default_value_t = String::from_str("").unwrap())]
-    output_prompt: String,
+    pub output_prompt: String,
 }
